@@ -25,7 +25,7 @@ public class TestFile
         int arraySize;
         long startTime, endTime, totalTime;
         String toPrintCSV = "Array,\tRecursion, \tTime " +
-                "(millisec)\n";
+                "(nanoseconds)\n";
 
         // starts at certain size and increment to get to much array size
         for (arraySize = MIN_ARRAY_SIZE; arraySize <= MAX_SIZE;
