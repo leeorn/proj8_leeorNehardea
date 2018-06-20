@@ -1,5 +1,12 @@
 package cs1c;
 
+/**
+ * Provided class with several different sorting methods.
+ * In this lab we will be using only quick sort to find the optimal number
+ * of recursions
+ *
+ * @author Foothill College, Bita M
+ */
 public class FHsort
 {
     // insertion sort -----------------------------------------------------

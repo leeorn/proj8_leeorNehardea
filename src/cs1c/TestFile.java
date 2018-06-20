@@ -1,6 +1,9 @@
 package cs1c;
 /**
- * Leeor N
+ * Creates several array sizes and tests the time it takes to sort the
+ * array using quicksort and different amount of recursions
+ *
+ * @author Foothill College, Leeor N
  */
 
 import java.io.BufferedWriter;
@@ -10,12 +13,12 @@ import java.util.Random;
 
 public class TestFile
 {
+    // constant static variables
     private static final int MIN_ARRAY_SIZE = 20000;
     private static final int MAX_SIZE = 10000000;
     private static final int INCREMENT_AMOUNT = 500000;
     private static final int MAX_RECURSION = 300;
     private static final int MIN_RECURSION = 2;
-
 
     public static void main(String[] args)
     {
@@ -23,19 +26,21 @@ public class TestFile
         long startTime, endTime, totalTime;
         String toPrintCSV = "Array,\tRecursion, \tTime " +
                 "(millisec)\n";
-        String fileName = "";
 
+        // starts at certain size and increment to get to much array size
         for (arraySize = MIN_ARRAY_SIZE; arraySize <= MAX_SIZE;
              arraySize += INCREMENT_AMOUNT)
         {
             Integer originalArray[] = new Integer[arraySize];
 
+            // using Random to fill the array with numbers
             Random randomNum = new Random();
             for (int i = 0; i < arraySize; i++)
             {
                 originalArray[i] = randomNum.nextInt(MAX_SIZE);
             }
 
+            // quicksorting the array using different number of recursions
             for (int i = MIN_RECURSION; i <= MAX_RECURSION; i+= 2)
             {
                 Integer copiedArray[] = originalArray.clone();
